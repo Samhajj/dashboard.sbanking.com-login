@@ -211,7 +211,7 @@ font-family: 'Rubik', sans-serif; */
     display: grid;
     justify-content: center;
     align-content: center;
-    padding: 3rem 1rem 0 !important;
+    padding: 4rem 1rem 0 !important;
   }
 
   .welcome-user-msg .greetings {
