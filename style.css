@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.289),
+      rgba(255, 255, 255, 0.216)
+    ),
+    url(Images/young-black-boys-playing-their-new-house.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Rubik', sans-serif; */
+
+#login {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding-top: 6rem;
+}
+
+.welcome-user-msg {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.welcome-user-msg .greetings {
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.information {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+}
+
+.pin {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 20px);
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.pin input {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border-width: 0;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.384);
+}
+
+.pin input:hover {
+  background: rgba(0, 0, 0, 0.384);
+}
+
+.pin input:visited {
+  border-color: transparent;
+  border-width: 0;
+  background: rgba(0, 0, 0, 0.384);
+}
+
+.reset-password {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+.reset-password a {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(71, 21, 117);
+  text-decoration: none;
+  cursor: pointer !important;
+  letter-spacing: 1px;
+}
+
+.face-verification {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  margin-top: 2em;
+}
+
+.face-verification a {
+  text-decoration: none;
+  cursor: pointer !important;
+}
+
+.face-verification .fa-id-badge {
+  color: rgb(71, 21, 117);
+  font-size: 20px;
+}
+
+.face-verification span {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.wrong-account-msg {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  margin-top: 1.5em;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrong-account-msg a {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.wrong-account-msg .log-out {
+  color: rgb(71, 21, 117);
+
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pin-digits {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1em;
+}
+
+.pin-digits input {
+  width: 50px;
+  height: 50px;
+  border: transparent;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+
+.pin-digits input[value="0"] {
+  grid-column: 2/3;
+}
+
+.fa-times {
+  grid-column: 3/-1;
+  width: 20%;
+  overflow: hidden;
+  font-size: 15px;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.384);
+  border-top-left-radius: 1500px;
+  border-bottom-left-radius: 1500px;
+  transition: 100ms ease-in-out;
+  font-size: 18px;
+}
+
+.fa-times:hover {
+  color: rgba(255, 255, 255, 0.863);
+  cursor: pointer !important;
+  box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.363);
+}
+
+@media (max-width: 1000px) {
+  #login {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding-top: 10rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #login {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding: 3rem 1rem 0 !important;
+  }
+
+  .welcome-user-msg .greetings {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .information {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+  }
+
+  .pin input {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border-width: 0;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.384);
+  }
+}
