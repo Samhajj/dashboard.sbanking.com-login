@@ -15,7 +15,7 @@ body {
       rgba(255, 255, 255, 0.289),
       rgba(255, 255, 255, 0.216)
     ),
-    url(Images/young-black-boys-playing-their-new-house.jpg);
+    url(Images/young-black-boys-playing-their-n.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,7 +81,11 @@ font-family: 'Rubik', sans-serif; */
 }
 
 .clicked {
-  background: blue;
+  background: rgba(0, 0, 0, 0.384);
+}
+
+.checked {
+  background: rgba(10, 6, 233, 0.384);
 }
 
 .reset-password {
@@ -115,7 +119,7 @@ font-family: 'Rubik', sans-serif; */
   cursor: pointer !important;
 }
 
-.face-verification .fa-id-badge {
+.face-verification .fa-face-grin {
   color: rgb(71, 21, 117);
   font-size: 20px;
 }
@@ -176,6 +180,19 @@ font-family: 'Rubik', sans-serif; */
   padding: 10px;
   font-size: 20px;
   border-radius: 100%;
+  cursor: pointer;
+}
+
+.pin-digit {
+  width: 50px;
+  height: 50px;
+  border: transparent;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 100%;
 }
 
 .pin-digits input[value="0"] {
@@ -215,7 +232,7 @@ font-family: 'Rubik', sans-serif; */
     display: grid;
     justify-content: center;
     align-content: center;
-    padding: 4rem 1.7rem 0 !important;
+    padding: 4rem 1rem 0 !important;
   }
 
   .welcome-user-msg .greetings {
