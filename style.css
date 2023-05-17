@@ -218,15 +218,6 @@ font-family: 'Rubik', sans-serif; */
   box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.363);
 }
 
-@media (max-width: 1000px) {
-  #login {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    padding-top: 10rem;
-  }
-}
-
 .overlay {
   content: "";
   position: absolute;
@@ -234,7 +225,7 @@ font-family: 'Rubik', sans-serif; */
   height: 100%;
   top: 0;
   left: 0;
-  background: rgb(0, 0, 0, 0.126);
+  background: rgb(0, 0, 0, 0.326);
   backdrop-filter: blur(5px);
 }
 
@@ -275,6 +266,9 @@ font-family: 'Rubik', sans-serif; */
   align-items: center;
 }
 
+.container {
+  color: white;
+}
 .container h1 {
   width: 100%;
   display: grid;
@@ -350,6 +344,15 @@ font-family: 'Rubik', sans-serif; */
   font-weight: 400;
   word-spacing: 1px;
   letter-spacing: 1px;
+}
+
+@media (max-width: 1000px) {
+  #login {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding-top: 10rem;
+  }
 }
 
 @media (max-width: 600px) {
