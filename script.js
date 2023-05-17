@@ -1,5 +1,4 @@
 `use strict`;
-
 const pinAnswer1 = document.querySelector(".pin-answer1");
 const pinAnswer2 = document.querySelector(".pin-answer2");
 const pinAnswer3 = document.querySelector(".pin-answer3");
@@ -38,72 +37,134 @@ const digitPress = [
   digit9,
   digit10,
 ];
+const overlay = document.querySelector(".overlay");
 
+const signIn = document.querySelector(".sign-in-mode");
+const darkMode = document.querySelector(".dark-mode");
+const moon = document.querySelector(".dark-mode-container");
+let moonLog = document.querySelector(".fa-moon");
+const body = document.querySelector("body");
+const greetings = document.querySelector(".greetings");
+const information = document.querySelector(".information");
+const faceId = document.querySelector(".face-id");
+const wrongMsgText = document.querySelector(".wrong-account-msg-text");
 let counter = 0;
-// let clickCount = 6;
-// for (let i = 0; i < pinCheck.length; i++) {
-//   if (clickCount === 6)
-//     clear.addEventListener("click", function () {
-//       pinCheck[5].classList.remove("checked");
-//       counter--;
-//     });
-//   else if (clickCount === 5) {
-//     clear.addEventListener("click", function () {
-//       pinCheck[5].classList.remove("checked");
-//       pinCheck[4].classList.remove("checked");
-//       counter--;
-//     });
-//   }
+let clickCounter = 0;
+
+const init = function () {
+  // let clickCount = 6;
+  // for (let i = 0; i < pinCheck.length; i++) {
+  //   if (clickCount === 6)
+  //     clear.addEventListener("click", function () {
+  //       pinCheck[5].classList.remove("checked");
+  //       counter--;
+  //     });
+  //   else if (clickCount === 5) {
+  //     clear.addEventListener("click", function () {
+  //       pinCheck[5].classList.remove("checked");
+  //       pinCheck[4].classList.remove("checked");
+  //       counter--;
+  //     });
+  //   }
+  // }
+
+  overlay.classList.add("hidden");
+  signIn.classList.add("hidden");
+
+  for (let i = 0; i < digitPress.length; i++) {
+    digitPress[i].addEventListener("click", function () {
+      if (counter === 0) {
+        pinCheck[0].classList.add("checked");
+        counter++;
+      } else if (counter === 1) {
+        pinCheck[0].classList.add("checked");
+        pinCheck[1].classList.add("checked");
+        counter++;
+      } else if (counter === 2) {
+        pinCheck[0].classList.add("checked");
+        pinCheck[1].classList.add("checked");
+        pinCheck[2].classList.add("checked");
+        counter++;
+      } else if (counter === 3) {
+        pinCheck[0].classList.add("checked");
+        pinCheck[1].classList.add("checked");
+        pinCheck[2].classList.add("checked");
+        pinCheck[3].classList.add("checked");
+        counter++;
+      } else if (counter === 4) {
+        pinCheck[0].classList.add("checked");
+        pinCheck[1].classList.add("checked");
+        pinCheck[2].classList.add("checked");
+        pinCheck[3].classList.add("checked");
+        pinCheck[4].classList.add("checked");
+        counter++;
+      } else if (counter === 5) {
+        pinCheck[0].classList.add("checked");
+        pinCheck[1].classList.add("checked");
+        pinCheck[2].classList.add("checked");
+        pinCheck[3].classList.add("checked");
+        pinCheck[4].classList.add("checked");
+        pinCheck[5].classList.add("checked");
+        overlay.classList.remove("hidden");
+        signIn.classList.remove("hidden");
+        darkMode.style.display = `none`;
+      }
+    });
+  }
+
+  // Add event listeners to digitPress elements for mouseenter and mouseout
+  for (let i = 0; i < digitPress.length; i++) {
+    digitPress[i].addEventListener("mouseenter", function () {
+      digitPress[i].classList.add("clicked");
+    });
+    digitPress[i].addEventListener("mouseout", function () {
+      digitPress[i].classList.remove("clicked");
+    });
+  }
+};
+
+init();
+
+moon.addEventListener("click", function () {
+  if (clickCounter === 0) {
+    body.style.background = `linear-gradient(
+      rgba(0, 0, 0, 0.589),
+      rgba(0, 0, 0, 0.516)
+    ),
+    url(Images/young-black-boys-playing-their-n.jpg)`;
+    body.style.backgroundPosition = "center";
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "cover";
+    body.style.backgroundAttachment = "scroll";
+    moonLog.classList.remove(`fa-moon`);
+    moonLog.classList.add(`fa-sun`);
+    moonLog.style.color = `#fff`;
+    greetings.style.color = `#fff`;
+    information.style.color = `#fff`;
+    faceId.style.color = `#fff`;
+    wrongMsgText.style.color = `#fff`;
+    clickCounter++;
+  } else if (clickCounter === 1) {
+    body.style.background = `linear-gradient(
+      rgba(255, 255,255, 0.289),
+      rgba(255, 255, 255, 0.216)
+    ),
+    url(Images/young-black-boys-playing-their-n.jpg)`;
+    body.style.backgroundPosition = "center";
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "cover";
+    body.style.backgroundAttachment = "scroll";
+    moonLog.classList.remove(`fa-sun`);
+    moonLog.classList.add(`fa-moon`);
+    moonLog.style.color = `#000`;
+    greetings.style.color = `#000`;
+    information.style.color = `#000`;
+    faceId.style.color = `#000`;
+    wrongMsgText.style.color = `#000`;
+    clickCounter--;
+  }
+});
 // }
-
-for (let i = 0; i < digitPress.length; i++) {
-  digitPress[i].addEventListener("click", function () {
-    if (counter === 0) {
-      pinCheck[0].classList.add("checked");
-      counter++;
-    } else if (counter === 1) {
-      pinCheck[0].classList.add("checked");
-      pinCheck[1].classList.add("checked");
-      counter++;
-    } else if (counter === 2) {
-      pinCheck[0].classList.add("checked");
-      pinCheck[1].classList.add("checked");
-      pinCheck[2].classList.add("checked");
-      counter++;
-    } else if (counter === 3) {
-      pinCheck[0].classList.add("checked");
-      pinCheck[1].classList.add("checked");
-      pinCheck[2].classList.add("checked");
-      pinCheck[3].classList.add("checked");
-      counter++;
-    } else if (counter === 4) {
-      pinCheck[0].classList.add("checked");
-      pinCheck[1].classList.add("checked");
-      pinCheck[2].classList.add("checked");
-      pinCheck[3].classList.add("checked");
-      pinCheck[4].classList.add("checked");
-      counter++;
-    } else if (counter === 5) {
-      pinCheck[0].classList.add("checked");
-      pinCheck[1].classList.add("checked");
-      pinCheck[2].classList.add("checked");
-      pinCheck[3].classList.add("checked");
-      pinCheck[4].classList.add("checked");
-      pinCheck[5].classList.add("checked");
-    }
-  });
-}
-
-// Add event listeners to digitPress elements for mouseenter and mouseout
-for (let i = 0; i < digitPress.length; i++) {
-  digitPress[i].addEventListener("mouseenter", function () {
-    digitPress[i].classList.add("clicked");
-  });
-  digitPress[i].addEventListener("mouseout", function () {
-    digitPress[i].classList.remove("clicked");
-  });
-}
-
 // let clickCount = 0;
 
 // // Get a reference to the button element
