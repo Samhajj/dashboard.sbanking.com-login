@@ -164,6 +164,12 @@ moon.addEventListener("click", function () {
     clickCounter--;
   }
 });
+
+signIn.addEventListener("click", function () {
+  overlay.classList.add("hidden");
+  signIn.classList.add("hidden");
+  darkMode.style.display = `grid`;
+});
 // }
 // let clickCount = 0;
 
