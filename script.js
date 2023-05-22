@@ -170,38 +170,29 @@ signIn.addEventListener("click", function () {
   signIn.classList.add("hidden");
   darkMode.style.display = `grid`;
 });
-// }
-// let clickCount = 0;
 
-// // Get a reference to the button element
-// const button = document.getElementById("myButton");
+let clockCounter = 0;
+clear.addEventListener("click", function () {
+  if (pinCheck[5].classList.contains("checked")) {
+    pinCheck[5].classList.remove("checked");
+    counter = 5;
+  } else if (pinCheck[4].classList.contains("checked")) {
+    pinCheck[4].classList.remove("checked");
+    counter = 4;
+  } else if (pinCheck[3].classList.contains("checked")) {
+    pinCheck[3].classList.remove("checked");
+    counter = 3;
+  } else if (pinCheck[2].classList.contains("checked")) {
+    pinCheck[2].classList.remove("checked");
+    counter = 2;
+  } else if (pinCheck[1].classList.contains("checked")) {
+    pinCheck[1].classList.remove("checked");
+    counter = 1;
+  } else if (pinCheck[0].classList.contains("checked")) {
+    pinCheck[0].classList.remove("checked");
+    counter = 0;
+  }
+});
 
-// // Initialize a counter variable to track the number of clicks
-// let clickCount = 0;
-
-// // Add an event listener to the button that performs a different function based on the number of clicks
-// button.addEventListener("click", function() {
-//   // Increment the click count
-//   clickCount++;
-
-//   // Call the first function if it's the first click
-//   if (clickCount === 1) {
-//     doFirstFunction();
-//   }
-//   // Call the second function if it's the second click
-//   else if (clickCount === 2) {
-//     doSecondFunction();
-//     // Reset the click count to start over
-//     clickCount = 0;
-//   }
-// });
-
-// // Define the first function
-// function doFirstFunction() {
-//   console.log("First function called.");
-// }
-
-// // Define the second function
-// function doSecondFunction() {
-//   console.log("Second function called.");
-// }
+// let userName = document.querySelector(".username");
+// userName = prompt(`please enter your name`);
